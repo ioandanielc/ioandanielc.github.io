@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,63 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #fbfaf7;
-    --fg: #1d1d1b;
-    --muted: #6b6a66;
-    --rule: #e4e1da;
-    --accent: #2f5d8a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #151514;
-      --fg: #e9e7e2;
-      --muted: #9a9892;
-      --rule: #2c2b29;
-      --accent: #8fb6dd;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 17px/1.65 "Source Serif 4", Georgia, serif;
-  }
-  main { max-width: 720px; margin: 0 auto; padding: 64px 20px 96px; }
-  header { display: flex; gap: 28px; align-items: center; margin-bottom: 40px; }
-  header img {
-    width: 132px; height: 132px; border-radius: 50%;
-    object-fit: cover; flex-shrink: 0; background: var(--rule);
-  }
-  h1 { font-size: 2rem; font-weight: 600; line-height: 1.2; margin: 0 0 6px; }
-  .role { color: var(--muted); margin: 0 0 12px; }
-  .links { font: 500 14px/1.6 Inter, system-ui, sans-serif; display: flex; flex-wrap: wrap; gap: 6px 16px; }
-  h2 {
-    font: 500 13px/1 Inter, system-ui, sans-serif;
-    letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
-    margin: 44px 0 14px; padding-top: 20px; border-top: 1px solid var(--rule);
-  }
-  p { margin: 0 0 14px; }
-  ul { margin: 0; padding-left: 1.2em; }
-  li { margin-bottom: 6px; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  dl { margin: 0; }
-  dt { font-weight: 600; margin-top: 16px; }
-  dt:first-child { margin-top: 0; }
-  dd { margin: 4px 0 0; }
-  .tag { font: 500 12px/1 Inter, system-ui, sans-serif; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 8px; margin-left: 6px; white-space: nowrap; vertical-align: 2px; }
-  footer { margin-top: 56px; font: 13px Inter, system-ui, sans-serif; color: var(--muted); }
-  @media (max-width: 560px) {
-    main { padding: 40px 16px 72px; }
-    header { flex-direction: column; align-items: flex-start; gap: 18px; }
-    header img { width: 108px; height: 108px; }
-    h1 { font-size: 1.7rem; }
-  }
-</style>
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <main>
@@ -76,6 +23,7 @@
       <div class="links">
         <a href="mailto:ioandaniel.craciun@tum.de">Email</a>
         <a href="cv.pdf">CV</a>
+        {% if site.posts.size > 0 %}<a href="/blog/">Blog</a>{% endif %}
         <a href="https://scholar.google.com/citations?user=US0HacMAAAAJ">Google Scholar</a>
         <a href="https://orcid.org/0009-0003-2129-4108">ORCID</a>
         <a href="https://www.linkedin.com/in/ioan-daniel-c-935389b1/">LinkedIn</a>

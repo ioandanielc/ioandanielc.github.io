@@ -1,0 +1,22 @@
+title: Ioan-Daniel Craciun
+description: PhD student in scientific machine learning at the Technical University of Munich.
+author: Ioan-Daniel Craciun
+url: https://ioandanielc.github.io
+baseurl: ""
+lang: en
+
+permalink: /blog/:year/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: /blog/feed.xml
+
+exclude:
+  - README.md
